@@ -4,83 +4,309 @@ body {
   background-image: url('../img2.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   font-size: 14px;
   font-family: sans-serif;
   color: white;
-  overflow: auto;
+  overflow-x: hidden;
 }
+
 a {
   color: white;
   font-size: 14px;
 }
+
 #main {
   width: 100%;
 }
+
 #wrap {
   position: relative;
-  margin: 0 auto;
-  width: 1100px;
-  height: 680px;
-  margin-top: 10px;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  min-height: 600px;
+  padding: 10px;
 }
+
 #text {
-  width: 272px;
-  height: 560px;
-  left: 188px;
-  top: 80px;
-  position: absolute;
+  width: 25%;
+  max-width: 272px;
+  min-width: 200px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
 }
+
 #code {
   display: none;
   color: rgb(196, 255, 255);
-  font-size: 16px;
-  margin-top: 70px;
-  line-height: 25px;
-  font-size: larger;
-  font-weight: bolder;
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+  font-weight: bold;
 }
+
 #clock-box {
-  position: absolute;
-  left: 60px;
-  top: 550px;
-  font-size: 28px;
+  position: relative;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-align: center;
   display: none;
 }
+
 #clock-box a {
-  font-size: 28px;
+  font-size: inherit;
   text-decoration: none;
 }
+
 #clock {
-  margin-left: 48px;
+  margin-top: 10px;
 }
+
 #clock .digit {
-  font-size: 64px;
+  font-size: 2.5rem;
 }
+
 #canvas {
   margin: 0 auto;
-  width: 1100px;
-  height: 680px;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
 }
+
 #error {
-  margin: 0 auto;
+  margin: 60px auto;
   text-align: center;
-  margin-top: 60px;
   display: none;
 }
+
 .hand {
   cursor: pointer;
 }
+
 .say {
   margin-left: 5px;
 }
+
 .space {
-  margin-right: 150px;
+  margin-right: 10vw;
 }
 
-#message-box{
-  position: absolute;
-  margin-top:450px;
-  font-size: 25px;
+#message-box {
+  margin: 40px auto 0;
+  font-size: 1.2rem;
   font-family: monospace;
+  text-align: center;
+}
 
+/* ============================= */
+/* 📱 Mobile Responsive Styles */
+/* ============================= */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  #wrap {
+    height: auto;
+    padding: 15px;
+  }
+
+  #text {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #clock-box {
+    font-size: 1.2rem;
+  }
+
+  #clock .digit {
+    font-size: 1.8rem;
+  }
+
+  #canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  #message-box {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #text {
+    width: 100%;
+  }
+
+  #clock-box {
+    font-size: 1rem;
+  }
+
+  #clock .digit {
+    font-size: 1.5rem;
+  }
+
+  #message-box {
+    font-size: 0.9rem;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../img2.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: white;
+  overflow-x: hidden;
+}
+
+a {
+  color: white;
+  font-size: 14px;
+}
+
+#main {
+  width: 100%;
+}
+
+#wrap {
+  position: relative;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  min-height: 600px;
+  padding: 10px;
+}
+
+#text {
+  width: 25%;
+  max-width: 272px;
+  min-width: 200px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+#code {
+  display: none;
+  color: rgb(196, 255, 255);
+  font-size: 1rem;
+  margin-top: 20px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+#clock-box {
+  position: relative;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  display: none;
+}
+
+#clock-box a {
+  font-size: inherit;
+  text-decoration: none;
+}
+
+#clock {
+  margin-top: 10px;
+}
+
+#clock .digit {
+  font-size: 2.5rem;
+}
+
+#canvas {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+}
+
+#error {
+  margin: 60px auto;
+  text-align: center;
+  display: none;
+}
+
+.hand {
+  cursor: pointer;
+}
+
+.say {
+  margin-left: 5px;
+}
+
+.space {
+  margin-right: 10vw;
+}
+
+#message-box {
+  margin: 40px auto 0;
+  font-size: 1.2rem;
+  font-family: monospace;
+  text-align: center;
+}
+
+/* ============================= */
+/* 📱 Mobile Responsive Styles */
+/* ============================= */
+@media (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  #wrap {
+    height: auto;
+    padding: 15px;
+  }
+
+  #text {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #clock-box {
+    font-size: 1.2rem;
+  }
+
+  #clock .digit {
+    font-size: 1.8rem;
+  }
+
+  #canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  #message-box {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #text {
+    width: 100%;
+  }
+
+  #clock-box {
+    font-size: 1rem;
+  }
+
+  #clock .digit {
+    font-size: 1.5rem;
+  }
+
+  #message-box {
+    font-size: 0.9rem;
+  }
 }
